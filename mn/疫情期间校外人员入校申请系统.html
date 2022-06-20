@@ -1,0 +1,163 @@
+
+<!-- saved from url=(0056)http://background.cumt.edu.cn/txm/xwry?phone=18402581390 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>疫情期间校外人员入校申请系统</title>
+    <link href="./疫情期间校外人员入校申请系统_files/login_phone.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="./疫情期间校外人员入校申请系统_files/main.css">
+    <script src="./疫情期间校外人员入校申请系统_files/jquery-1.7.2.min.js.下载"></script>
+    <script type="text/javascript" src="./疫情期间校外人员入校申请系统_files/jquery.qrcode.min.js.下载"></script>
+
+<script>
+    jQuery(function () {
+        var state = 'pass';
+        var color = '4EB16E';
+        var content = "";
+        var informationUrl = '';
+        if (state == 'pass') {
+            content = informationUrl;
+        } else if (state == 'invalid') {
+            content = '当前码无效，请查看申请历史';
+        }
+        console.info(content);
+        jQuery('#output').qrcode({
+            render: "table",
+            width: 280,
+            height: 280,
+            text: content,
+            render: "canvas", //也可以替换为table
+            foreground: "#" + color,
+            background: "#FFF"
+
+        });
+    });
+
+
+    //获取系统时间
+    function showTime() {
+        nowtime = new Date();
+        year = nowtime.getFullYear();//年
+        month = nowtime.getMonth() + 1;//月
+        day = nowtime.getDate();//日
+        hour = nowtime.getHours();//时
+        minutes = nowtime.getMinutes(); //分
+        seconds = nowtime.getSeconds(); //秒
+        //文字增加空格
+        document.getElementById("div_timer").style = "white-space:pre;";
+        //显示时间
+        document.getElementById("div_timer").innerText = p(year) + "-" + p(month) + "-" + p(day);
+        document.getElementById("div_timer_time").innerText = p(hour) + ":" + p(minutes) + ":" + p(seconds);
+    }
+
+    setInterval("showTime()", 1000);
+
+    //月日时分秒小于10补0
+    function p(s) {
+        return s < 10 ? '0' + s : s;
+    }
+</script><script type="text/javascript">
+    function fresh() {
+        location.reload();
+    }
+</script><style>
+    .time2 {
+        font-size: 1.2rem;
+    }
+
+    .sj {
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .rq {
+        width: 100%;
+        text-align: center;
+        font-size: 2.3rem;
+        font-weight: bold;
+    }
+
+    .time2:nth-child(2) {
+        margin-bottom: 10px;
+    }
+
+    .content-box {
+        padding-top: 15px;
+        margin-top: 15px;
+    }
+
+    .time3 {
+        font-size: 1.2rem;
+        font-weight: bold
+    }
+
+    .time3:nth-child(2) {
+        margin-bottom: 10px;
+    }
+</style></head>
+
+
+
+
+<body class="blue-bg">
+<div class="phone_logo_index"><img src="./疫情期间校外人员入校申请系统_files/logo2.png" style="width: 200px" alt=""></div>
+
+
+<div style="text-align: center;margin: 0 50 0 0">
+    <a style="text-align: right;margin: 0 130 0 0" href="http://background.cumt.edu.cn/infoplus/form/XWJXSQ/start?sig=394916fdc2415723615b8cbe8fdd3b03&amp;ts=1636594366&amp;uid=ae8cad03-6823-11e1-82ab-0150569f525e&amp;phone=18402581390">发起入校申请</a>
+    <div class="link-btn-start"><a href="http://background.cumt.edu.cn/txm/xw/phoneLogout">退出登录</a></div>
+</div>
+
+
+<div class="content-box">
+    
+    <div class="time3">
+        马宁 622224199704285017
+    </div>
+    
+    <div style="margin: auto;text-align: center">
+        
+            <span style="font-size:1.5rem;background: #00B050 "> &nbsp;  南湖校区&nbsp; </span>
+        
+        
+    </div>
+    <div class="rq" id="div_timer" style="white-space: pre;">2022-06-20</div>
+
+    
+    
+    
+
+        
+
+            
+
+                
+                <div class="qr-border-green">
+                    
+                    <div class="qr" id="output"><canvas width="280" height="280"></canvas></div>
+                </div>
+
+                
+                
+                <div class="sj" id="div_timer_time">22:12:16</div>
+                <div class="time" style="font-weight: bold">有效期：2022/06/16至2022/06/16<br>审核状态：审核通过</div>
+                
+                
+                    <div style="font-weight: bold;margin: auto;text-align: center;">苏康码信息：</div>
+                
+                <div class="link-btn"><a href="http://background.cumt.edu.cn/txm/record?phone=18402581390">申请记录</a>&nbsp;&nbsp;&nbsp;<button onclick="fresh() " style="border: none;background: none;font-size: 16px;color: #4eb16e">
+                    刷新 <img src="./疫情期间校外人员入校申请系统_files/refresh.png" style="width: 15px"></button>
+                </div>
+
+
+                <div id="dateTime"></div>
+                <p class="tip" style="margin-top: 20px;">凭此码可在中国矿业大学校园内通行，<br>请主动出示，配合检查。</p>
+            </div>
+
+            <iframe hidden="" src="./疫情期间校外人员入校申请系统_files/logout.html" frameborder="0"></iframe>
+
+
+
+
+</body></html>
